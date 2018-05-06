@@ -1,0 +1,13 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+    <!--local position-->
+    <localRepository>/home/lulu/env/repository</localRepository>
+    <!--maven-public-->
+    <mirrors>
+        <mirror>
+            <name>Local Repository</name>
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://192.168.1.109:8081/maven2/repository/public/</url>
+        </mirror>
+    </mirrors>
+</settings>
