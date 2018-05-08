@@ -9,4 +9,20 @@
     <insert id="addUser" parameterType="com.xbc.database.model.Student">
         INSERT INTO student(username, password) VALUES (#{username}, #{password})
     </insert>
+    <update id="updateUser">
+        UPDATE student
+        <set>
+            <choose>
+                <when test="username==null">
+                    password=#{password}
+                </when>
+                <otherwise>
+                    password=#{password}, username=#{username}
+                </otherwise>
+            </choose>
+        </set>
+
+        WHERE id = #{id}
+
+    </update>
 </mapper>

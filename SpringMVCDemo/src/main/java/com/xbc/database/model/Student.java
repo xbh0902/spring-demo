@@ -1,7 +1,7 @@
 package com.xbc.database.model;
 
 public class Student {
-    private transient int id;
+    private int id;
     private String username;
     private String password;
 

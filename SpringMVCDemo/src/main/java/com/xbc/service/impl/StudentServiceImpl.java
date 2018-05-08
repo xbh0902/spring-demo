@@ -20,4 +20,9 @@ public class StudentServiceImpl implements StudentService {
     public void addStudent(Student student) {
         studentMapper.addUser(student);
     }
+
+    @Override
+    public void updateStudent(Student student) {
+        studentMapper.updateUser(student);
+    }
 }

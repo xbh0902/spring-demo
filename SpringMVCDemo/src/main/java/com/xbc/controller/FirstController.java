@@ -1,9 +1,8 @@
 package com.xbc.controller;
 
-import com.alibaba.fastjson.JSON;
+import com.xbc.api.base.ResponseContenner;
 import com.xbc.database.model.Student;
 import com.xbc.service.StudentService;
-import com.xbc.service.impl.StudentServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +23,21 @@ public class FirstController {
         return student;
     }
 
+    @PatchMapping("/user")
+    @ResponseBody ResponseContenner updateUser(@RequestBody Student student){
+        studentService.updateStudent(student);
+        return new ResponseContenner();
+    }
+
+    @DeleteMapping("/user")
+    @ResponseBody ResponseContenner deleteUser(@RequestBody Student student){
+        return new ResponseContenner();
+    }
+
     @PutMapping("/user")
-    @ResponseBody
-    com.xbc.api.base.ResponseBody addUser(@RequestBody Student student){
+    @ResponseBody ResponseContenner addUser(@RequestBody Student student){
 
         studentService.addStudent(student);
-        return new com.xbc.api.base.ResponseBody();
+        return new ResponseContenner();
     }
 }

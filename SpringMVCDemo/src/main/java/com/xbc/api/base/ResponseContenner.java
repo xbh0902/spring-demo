@@ -1,6 +1,6 @@
 package com.xbc.api.base;
 
-public class ResponseBody<T> {
+public class ResponseContenner<T> {
 
     private int code;
     private String message;
