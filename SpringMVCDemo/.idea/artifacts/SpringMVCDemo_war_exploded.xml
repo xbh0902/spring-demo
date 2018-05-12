@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SpringMVCDemo:war exploded">
-    <output-path>$PROJECT_DIR$/target/spri</output-path>
+    <output-path>$PROJECT_DIR$/target/spd</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -50,10 +50,16 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.3.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.3" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.12" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-redis:1.7.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-keyvalue:1.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: redis.clients:jedis:2.7.3" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/spri/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/spd/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="SpringMVCDemo/web/Web" />
     </root>

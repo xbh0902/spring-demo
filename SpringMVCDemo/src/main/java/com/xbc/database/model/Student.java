@@ -1,6 +1,8 @@
 package com.xbc.database.model;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
     private int id;
     private String username;
     private String password;

@@ -2,6 +2,7 @@ package com.xbc.controller;
 
 import com.xbc.api.base.ResponseContenner;
 import com.xbc.database.model.Student;
+import com.xbc.service.RedisService;
 import com.xbc.service.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,12 +15,18 @@ public class FirstController {
 
     final private Logger logger = LoggerFactory.getLogger(FirstController.class);
 
+    private static final String key = "TB_STUDENT";
     @Autowired
-    StudentService studentService;
+    private StudentService studentService;
+    @Autowired
+    private RedisService redisService;
 
     @GetMapping("/user")
     @ResponseBody Student getUser(){
         Student student = studentService.getStudent("1");
+        redisService.setValue(key, student);
+        Student cache = (Student) redisService.get(key);
+        logger.debug("name:" + cache.getUsername());
         return student;
     }
 
@@ -31,6 +38,7 @@ public class FirstController {
 
     @DeleteMapping("/user")
     @ResponseBody ResponseContenner deleteUser(@RequestBody Student student){
+
         return new ResponseContenner();
     }
 
@@ -38,6 +46,8 @@ public class FirstController {
     @ResponseBody ResponseContenner addUser(@RequestBody Student student){
 
         studentService.addStudent(student);
-        return new ResponseContenner();
+        ResponseContenner contenner = new ResponseContenner();
+        contenner.setCode(300);
+        return contenner;
     }
 }

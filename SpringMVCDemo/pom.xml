@@ -3,38 +3,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.xbc</groupId>
     <artifactId>spring-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <repositories>
+    <properties>
+        <org.spring.framework.version>4.3.5.RELEASE</org.spring.framework.version>
+    </properties>
+    <distributionManagement>
         <repository>
-            <id>central</id>
-            <name>Central Repository</name>
-            <url>http://repo.maven.apache.org/maven2</url>
-            <layout>default</layout>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.1.109:8081/maven2/repository/maven-releases/</url>
         </repository>
-    </repositories>
-    <!--<mirror>-->
-    <!--<id>nexus-osc</id>-->
-    <!--<mirrorOf>*</mirrorOf>-->
-    <!--<name>Nexus osc</name>-->
-    <!--<url>http://maven.oschina.net/content/groups/public/</url>-->
-    <!--</mirror>-->
-    <!--<mirror>-->
-    <!--<id>nexus-aliyun</id>-->
-    <!--<mirrorOf>*</mirrorOf>-->
-    <!--<name>Nexus aliyun</name>-->
-    <!--<url>http://maven.aliyun.com/nexus/content/groups/public</url>-->
-    <!--</mirror>-->
-
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.1.109:8081/maven2/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <build>
-        <finalName>spri</finalName>
+        <finalName>spd</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -53,7 +43,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1.1</version>
-                <!-- <configuration> <webXml>target/web.xml</webXml> </configuration> -->
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
             </plugin>
             <!--编译插件-->
             <plugin>
@@ -83,6 +77,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.8</version>
                 <configuration>
+                    <skipTests>true</skipTests>
                     <printSummary>false</printSummary>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                 </configuration>
@@ -125,28 +120,28 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <!--Spring transaction-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -156,22 +151,22 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>4.3.5.RELEASE</version>
+            <version>${org.spring.framework.version}</version>
         </dependency>
         <!--Spring Web + Spring MVC-->
         <dependency>
@@ -322,8 +317,6 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.7.21</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations-java5</artifactId>
@@ -345,6 +338,28 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.12</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.7.2.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-orm</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.7.3</version>
         </dependency>
     </dependencies>
 </project>
