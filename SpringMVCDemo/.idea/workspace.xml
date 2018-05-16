@@ -56,24 +56,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
               <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/admin/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="153" column="41" lean-forward="true" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xbc/service/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/xbc/service/RedisServiceTest.java" />
         <option value="$PROJECT_DIR$/.ignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/xbc/service/RedisServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xbc/controller/FirstController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xbc/controller/UserController.java" />
@@ -182,6 +169,7 @@
         <option value="$PROJECT_DIR$/web/src/main/webapp/admin/仓库管理.html" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/admin/ckgl.html" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/admin/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -271,59 +259,6 @@
             <path>
               <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="crypt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringMVCDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -590,7 +525,7 @@
       <workItem from="1526036632673" duration="30209000" />
       <workItem from="1526195275608" duration="281000" />
       <workItem from="1526195728138" duration="5169000" />
-      <workItem from="1526457308068" duration="5984000" />
+      <workItem from="1526457308068" duration="6855000" />
     </task>
     <servers />
   </component>
@@ -627,7 +562,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126313000" />
+    <option name="totallyTimeSpent" value="127184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,13 +739,6 @@
     <entry file="file://$PROJECT_DIR$/lulu/src/test/resources/jdbc.properties" />
     <entry file="file://$PROJECT_DIR$/lulu/src/main/java/com/xbc/service/impl/RedisServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/lulu/src/test/resources/spring-application.xml" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lulu/src/test/java/com/xbc/service/RedisServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/lulu/src/test/java/com/xbc/controll/UserControllerTest.java" />
     <entry file="file://$PROJECT_DIR$/lulu/src/main/java/com/xbc/database/model/Student.java" />
@@ -946,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/webapp/admin/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -962,13 +882,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/webapp/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="153" column="41" lean-forward="true" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        <state relative-caret-position="104">
+          <caret line="154" column="28" lean-forward="false" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
