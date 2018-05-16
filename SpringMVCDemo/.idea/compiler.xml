@@ -6,11 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringMVCDemo" />
+        <module name="common" />
+        <module name="crypt" />
+        <module name="lulu-crypt" />
+        <module name="spring-demo" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="app" target="1.7" />
+      <module name="common" target="1.7" />
+      <module name="crypt" target="1.7" />
+      <module name="lulu" target="1.7" />
+      <module name="lulu-app" target="1.5" />
+      <module name="lulu-crypt" target="1.5" />
+      <module name="spring-demo" target="1.7" />
       <module name="SpringMVCDemo" target="1.7" />
+      <module name="web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
